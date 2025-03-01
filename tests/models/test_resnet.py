@@ -51,3 +51,11 @@ class TestResNetFF:
         assert output.dtype == input_tensor.dtype
         # Check if output device matches input device
         assert output.device == input_tensor.device
+
+        # Test without batch dimension
+        input_tensor = torch.randn(32, device=device)
+        output = model(input_tensor)
+
+        assert output.shape == input_tensor.shape
+        assert output.dtype == input_tensor.dtype
+        assert output.device == input_tensor.device
