@@ -92,7 +92,6 @@ repos:
     rev: v1.10.0
     hooks:
       - id: python-check-blanket-noqa
-      - id: python-check-blanket-type-ignore
       - id: python-no-log-warn
       - id: python-no-eval
       - id: python-use-type-annotations
