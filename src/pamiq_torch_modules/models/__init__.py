@@ -1,3 +1,3 @@
-from . import resnet
+from . import resnet, sioconv
 
-__all__ = ["resnet"]
+__all__ = ["resnet", "sioconv"]
