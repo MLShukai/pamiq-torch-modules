@@ -318,6 +318,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "torch" },
+    { name = "typing-extensions" },
 ]
 
 [package.dev-dependencies]
@@ -330,7 +331,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "torch", specifier = ">=2.0.0" }]
+requires-dist = [
+    { name = "torch", specifier = ">=2.0.0" },
+    { name = "typing-extensions", specifier = ">=4.12.2" },
+]
 
 [package.metadata.requires-dev]
 dev = [
