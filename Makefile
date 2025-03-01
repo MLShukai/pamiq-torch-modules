@@ -16,6 +16,6 @@ test: ## Run tests
 	uv run pytest -v
 
 type: ## Run type check
-	uv run pyright src
+	uv run pyright
 
 run: format test type ## Run all workflow.
