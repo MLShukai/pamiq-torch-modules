@@ -2,6 +2,8 @@ import torch.nn as nn
 from torch import Tensor
 from typing_extensions import override
 
+__all__ = ["ScalarOutput"]
+
 
 class ScalarOutput(nn.Module):
     """Neural network head that outputs a scalar value.
