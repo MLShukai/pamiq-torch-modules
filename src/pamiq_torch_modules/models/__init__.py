@@ -1,4 +1,4 @@
-from . import fc_normal, multicategorical, one_hot, resnet, scalar_output, sioconv
+from . import fc_normal, jepa, multicategorical, one_hot, resnet, scalar_output, sioconv
 
 __all__ = [
     "resnet",
@@ -7,4 +7,5 @@ __all__ = [
     "fc_normal",
     "scalar_output",
     "multicategorical",
+    "jepa",
 ]
