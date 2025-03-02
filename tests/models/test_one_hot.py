@@ -61,8 +61,6 @@ class TestMaskedOneHotCategoricalStraightThrough:
     @parametrize_device
     def test_log_prob(self, device):
         """Test log probability calculation."""
-        if device == MPS_DEVICE:
-            pytest.skip("Some host occurs segmentation fault.")
         logits = torch.randn(1, 3, 4, device=device)
         # fmt: off
         mask = torch.tensor(
