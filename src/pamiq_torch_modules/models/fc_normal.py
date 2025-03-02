@@ -7,7 +7,7 @@ from torch import Size, Tensor
 from torch.distributions import Normal
 from typing_extensions import override
 
-from ._types import SizeType
+from .utils import SizeType
 
 # Constants for FixedStdNormal
 SHIFT_ZERO = 1.0 / math.sqrt(2.0 * math.pi)

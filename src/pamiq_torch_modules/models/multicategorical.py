@@ -4,7 +4,7 @@ from torch import Tensor
 from torch.distributions import Categorical, Distribution
 from typing_extensions import override
 
-from ._types import SizeType
+from .utils import SizeType
 
 __all__ = ["Multicategorical", "MulticategoricalOutput"]
 
