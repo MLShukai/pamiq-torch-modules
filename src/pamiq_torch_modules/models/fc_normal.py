@@ -1,5 +1,5 @@
 import math
-from typing import Literal, TypeAlias
+from typing import Literal
 
 import torch
 import torch.nn as nn
@@ -7,7 +7,7 @@ from torch import Size, Tensor
 from torch.distributions import Normal
 from typing_extensions import override
 
-_size: TypeAlias = Size | list[int] | tuple[int, ...]
+from ._types import SizeType
 
 # Constants for FixedStdNormal
 SHIFT_ZERO = 1.0 / math.sqrt(2.0 * math.pi)
@@ -32,7 +32,7 @@ class DeterministicNormal(Normal):
     loc: Tensor
 
     @override
-    def sample(self, sample_shape: _size = Size()) -> Tensor:
+    def sample(self, sample_shape: SizeType = Size()) -> Tensor:
         """Return the mean instead of sampling.
 
         Args:
@@ -44,7 +44,7 @@ class DeterministicNormal(Normal):
         return self.rsample(sample_shape)
 
     @override
-    def rsample(self, sample_shape: _size = Size()) -> Tensor:
+    def rsample(self, sample_shape: SizeType = Size()) -> Tensor:
         """Return the mean instead of sampling with reparameterization.
 
         Args:
