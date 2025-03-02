@@ -4,6 +4,8 @@ import torch.nn.functional as F
 from torch import Tensor
 from typing_extensions import override
 
+__all__ = ["SioConvPS"]
+
 
 class RMSNorm(nn.Module):
     """Root Mean Square Layer Normalization.

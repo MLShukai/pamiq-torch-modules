@@ -6,6 +6,12 @@ from torch import Tensor
 from torch.distributions import OneHotCategoricalStraightThrough
 from typing_extensions import override
 
+__all__ = [
+    "MaskedOneHotCategoricalStraightThrough",
+    "MultiOneHots",
+    "OneHotToEmbedding",
+]
+
 
 class MaskedOneHotCategoricalStraightThrough(OneHotCategoricalStraightThrough):
     """Masked OneHotCategoricalStraightThrough class.

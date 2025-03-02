@@ -2,6 +2,8 @@ import torch.nn as nn
 from torch import Tensor
 from typing_extensions import override
 
+__all__ = ["ResNetFF"]
+
 
 class ResNetFF(nn.Module):
     """Residual network feed-forward module.
